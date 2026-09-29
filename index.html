@@ -7,7 +7,6 @@
     <style>
         /* =========================================================
            FALL WALLPAPER & BACKGROUND SETUP
-           Change the URL in background-image below to swap wallpaper!
            ========================================================= */
         body {
             margin: 0;
@@ -24,7 +23,7 @@
             min-height: 100vh;
         }
 
-        /* Dark overlay for high text readability */
+        /* Dark overlay for readability */
         .overlay {
             position: fixed;
             top: 0; left: 0; right: 0; bottom: 0;
@@ -43,7 +42,7 @@
             padding: 35px;
             max-width: 550px;
             width: 90%;
-            margin: 40px 20px;
+            margin: 40px 20px 100px 20px; /* Bottom margin leaves space for player */
             box-shadow: 0 15px 35px rgba(0,0,0,0.3);
         }
 
@@ -136,6 +135,44 @@
             color: #6d4c41;
             font-size: 0.95rem;
         }
+
+        /* FLOATING AUDIO CONTROLLER */
+        .audio-container {
+            position: fixed;
+            bottom: 20px;
+            z-index: 10;
+            background: rgba(62, 39, 35, 0.9);
+            border: 1px solid #8d6e63;
+            padding: 10px 18px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+            backdrop-filter: blur(5px);
+        }
+
+        .audio-btn {
+            background: #d97706;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        .audio-btn:hover {
+            background: #b45309;
+        }
+
+        .audio-label {
+            color: #ffecb3;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -187,6 +224,32 @@
             Thank you so much! Excited to celebrate together! 🍁
         </div>
     </div>
+
+    <!-- FLOATING RAIN AUDIO PLAYER -->
+    <div class="audio-container">
+        <span class="audio-label">🌧️ Relaxing Rain</span>
+        <button class="audio-btn" id="play-btn" onclick="toggleAudio()">Play Rain Sounds</button>
+        <audio id="rain-audio" loop preload="auto">
+            <source src="https://cdn.pixabay.com/download/audio/2021/08/09/audio_d08127027b.mp3?filename=rain-and-thunder-nature-sounds-7803.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script>
+        function toggleAudio() {
+            var audio = document.getElementById("rain-audio");
+            var btn = document.getElementById("play-btn");
+
+            if (audio.paused) {
+                audio.play();
+                btn.innerHTML = "Pause Rain";
+                btn.style.background = "#8d6e63";
+            } else {
+                audio.pause();
+                btn.innerHTML = "Play Rain Sounds";
+                btn.style.background = "#d97706";
+            }
+        }
+    </script>
 
 </body>
 </html>
