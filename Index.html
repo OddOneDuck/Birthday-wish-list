@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Birthday Wishlist 🍂</title>
+    <style>
+        /* =========================================================
+           FALL WALLPAPER & BACKGROUND SETUP
+           Change the URL in background-image below to swap wallpaper!
+           ========================================================= */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #3e2723;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Dark overlay for high text readability */
+        .overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(44, 24, 16, 0.45);
+            z-index: 1;
+        }
+
+        /* Main Container */
+        .card {
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 248, 240, 0.94);
+            backdrop-filter: blur(8px);
+            border: 2px solid #d7ccc8;
+            border-radius: 20px;
+            padding: 35px;
+            max-width: 550px;
+            width: 90%;
+            margin: 40px 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 2px dashed #bcaaa4;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            margin: 0;
+            color: #5d4037;
+            font-size: 2.2rem;
+        }
+
+        .header p {
+            margin: 8px 0 0;
+            color: #8d6e63;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .category {
+            margin-bottom: 25px;
+        }
+
+        .category h2 {
+            font-size: 1.3rem;
+            color: #a0522d;
+            border-bottom: 1px solid #d7ccc8;
+            padding-bottom: 5px;
+            margin-bottom: 12px;
+        }
+
+        .wish-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .wish-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            margin-bottom: 12px;
+            padding: 14px 16px;
+            border-radius: 10px;
+            border-left: 4px solid #d97706;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .wish-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .wish-info strong {
+            color: #3e2723;
+            font-size: 1rem;
+        }
+
+        .wish-info span {
+            color: #78350f;
+            font-size: 0.85rem;
+        }
+
+        .wish-item a {
+            color: #b45309;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            background: #fef3c7;
+            padding: 6px 12px;
+            border-radius: 6px;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+
+        .wish-item a:hover {
+            background: #fde68a;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-style: italic;
+            color: #6d4c41;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="overlay"></div>
+
+    <div class="card">
+        <div class="header">
+            <h1> Birthday Wishlist 🍂</h1>
+            <p>November 21st</p>
+        </div>
+
+        <!-- MAIN WISHLIST ITEMS -->
+        <div class="category">
+            <h2>🎁 Main Gifts</h2>
+            <ul class="wish-list">
+                <li class="wish-item">
+                    <div class="wish-info">
+                        <strong>KuKirin G4 Electric Scooter</strong>
+                        <span>High power off-road scooter</span>
+                    </div>
+                    <a href="https://www.kugooscooterusa.com/products/kukirin-g4-electric-scooter?variant=fb4840db-de2d-4c1e-ad8e-4ce8e18d7b64" target="_blank">View Item</a>
+                </li>
+                <li class="wish-item">
+                    <div class="wish-info">
+                        <strong>Comfrt The Dreamer Blanket</strong>
+                        <span>Color: Brown</span>
+                    </div>
+                    <a href="https://comfrt.com/products/the-dreamer-blanket?variant=43830935617580" target="_blank">View Item</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- CASH & OTHER OPTIONS -->
+        <div class="category">
+            <h2>💵 Other Options</h2>
+            <ul class="wish-list">
+                <li class="wish-item">
+                    <div class="wish-info">
+                        <strong>Birthday Money / Cash</strong>
+                        <span>Always appreciated!</span>
+                    </div>
+                    <span>💸</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            Thank you so much! Excited to celebrate together! 🍁
+        </div>
+    </div>
+
+</body>
+</html>
